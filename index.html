@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flow Jiu-Jitsu - Excellence in Martial Arts Training</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: #2d3748;
+            line-height: 1.6;
+        }
+        
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.98);
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-nav {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none;
+        }
+        
+        .logo-nav svg {
+            width: 45px;
+            height: 45px;
+        }
+        
+        .logo-text-nav {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .logo-text-nav .main {
+            font-family: 'Arial Black', sans-serif;
+            font-weight: 900;
+            font-size: 1.3em;
+            letter-spacing: 3px;
+            color: #2d3748;
+        }
+        
+        .logo-text-nav .sub {
+            font-size: 0.7em;
+            letter-spacing: 2px;
+            color: #4a5568;
+        }
+        
+        nav ul {
+            display: flex;
+            gap: 35px;
+            list-style: none;
+        }
+        
+        nav a {
+            color: #4a5568;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #8b7bb8;
+        }
+        
+        /* Hero Section */
+        .hero {
+            margin-top: 85px;
+            background: linear-gradient(135deg, #8b7bb8 0%, #6b5b9a 100%);
+            color: white;
+            padding: 120px 30px;
+            text-align: center;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero svg {
+            width: 150px;
+            height: 150px;
+            margin-bottom: 30px;
+        }
+        
+        .hero h1 {
+            font-family: 'Arial Black', sans-serif;
+            font-weight: 900;
+            font-size: 4em;
+            letter-spacing: 8px;
+            margin-bottom: 10px;
+        }
+        
+        .hero .subtitle {
+            font-size: 1.8em;
+            letter-spacing: 6px;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+        
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #ffd966;
+            color: #2d3748;
+            padding: 18px 45px;
+            font-size: 1.1em;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(255, 217, 102, 0.4);
+        }
+        
+        /* Sections */
+        section {
+            padding: 80px 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            font-family: 'Arial Black', sans-serif;
+            font-weight: 900;
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 60px;
+            color: #2d3748;
+        }
+        
+        /* Classes Grid */
+        .classes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        
+        .class-card {
+            background: #f8f9fa;
+            padding: 40px;
+            border-radius: 12px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .class-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(139, 123, 184, 0.2);
+        }
+        
+        .class-card h3 {
+            color: #8b7bb8;
+            font-size: 1.6em;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .class-card p {
+            color: #4a5568;
+            margin-bottom: 20px;
+        }
+        
+        .class-schedule {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 3px solid #8b7bb8;
+            font-size: 0.95em;
+            color: #2d3748;
+        }
+        
+        /* About Section */
+        .about {
+            background: #f8f9fa;
+        }
+        
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .about-content p {
+            font-size: 1.15em;
+            color: #4a5568;
+            margin-bottom: 25px;
+        }
+        
+        /* Benefits */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .benefit {
+            text-align: center;
+            padding: 30px;
+        }
+        
+        .benefit-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #8b7bb8 0%, #6b5b9a 100%);
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2em;
+            font-weight: 900;
+        }
+        
+        .benefit h3 {
+            color: #2d3748;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .benefit p {
+            color: #4a5568;
+            font-size: 0.95em;
+        }
+        
+        /* Contact Section */
+        .contact {
+            background: linear-gradient(135deg, #8b7bb8 0%, #6b5b9a 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .contact .section-title {
+            color: white;
+        }
+        
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .contact-item h3 {
+            font-size: 1.3em;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .contact-item p {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+        
+        .contact-item a {
+            color: #ffd966;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        /* Footer */
+        footer {
+            background: #2d3748;
+            color: #cbd5e0;
+            text-align: center;
+            padding: 40px 30px;
+        }
+        
+        footer p {
+            margin-bottom: 10px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2.5em;
+                letter-spacing: 4px;
+            }
+            
+            .hero .subtitle {
+                font-size: 1.2em;
+                letter-spacing: 3px;
+            }
+            
+            .section-title {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo-nav">
+                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <g transform="translate(100, 100)">
+                        <circle cx="0" cy="-60" r="26" fill="#9b7ed6"/>
+                        <circle cx="0" cy="-60" r="26" fill="#8b6fc4" transform="rotate(72)"/>
+                        <circle cx="0" cy="-60" r="26" fill="#9b7ed6" transform="rotate(144)"/>
+                        <circle cx="0" cy="-60" r="26" fill="#8b6fc4" transform="rotate(216)"/>
+                        <circle cx="0" cy="-60" r="26" fill="#9b7ed6" transform="rotate(288)"/>
+                        <circle cx="0" cy="0" r="18" fill="#fef3c7"/>
+                        <circle cx="0" cy="0" r="9" fill="#fde047"/>
+                    </g>
+                </svg>
+                <div class="logo-text-nav">
+                    <div class="main">FLOW</div>
+                    <div class="sub">JIU-JITSU</div>
+                </div>
+            </a>
+            <ul>
+                <li><a href="#classes">Classes</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <g transform="translate(100, 100)">
+                    <circle cx="0" cy="-60" r="26" fill="#ffffff"/>
+                    <circle cx="0" cy="-60" r="26" fill="#e8e0f5" transform="rotate(72)"/>
+                    <circle cx="0" cy="-60" r="26" fill="#ffffff" transform="rotate(144)"/>
+                    <circle cx="0" cy="-60" r="26" fill="#e8e0f5" transform="rotate(216)"/>
+                    <circle cx="0" cy="-60" r="26" fill="#ffffff" transform="rotate(288)"/>
+                    <circle cx="0" cy="0" r="18" fill="#fef3c7"/>
+                    <circle cx="0" cy="0" r="9" fill="#fde047"/>
+                </g>
+            </svg>
+            <h1>FLOW</h1>
+            <div class="subtitle">JIU-JITSU</div>
+            <p>Excellence in martial arts training. Join our community and discover the art of Brazilian Jiu-Jitsu in Johannesburg.</p>
+            <a href="#contact" class="cta-button">Start Your Journey</a>
+        </div>
+    </section>
+
+    <!-- Classes Section -->
+    <section id="classes">
+        <h2 class="section-title">Our Classes</h2>
+        <div class="classes-grid">
+            <div class="class-card">
+                <h3>Fundamentals</h3>
+                <p>Perfect for beginners. Learn the essential techniques and principles of Brazilian Jiu-Jitsu in a supportive environment.</p>
+                <div class="class-schedule">
+                    <strong>Schedule:</strong> Mon, Wed, Fri<br>
+                    6:00 AM - 7:00 AM<br>
+                    6:30 PM - 7:30 PM
+                </div>
+            </div>
+            
+            <div class="class-card">
+                <h3>Advanced Training</h3>
+                <p>For experienced practitioners looking to refine their skills and take their game to the next level.</p>
+                <div class="class-schedule">
+                    <strong>Schedule:</strong> Tue, Thu<br>
+                    7:00 AM - 8:30 AM<br>
+                    7:30 PM - 9:00 PM
+                </div>
+            </div>
+            
+            <div class="class-card">
+                <h3>Open Mat</h3>
+                <p>Free training sessions where you can drill techniques, spar, and work on your game at your own pace.</p>
+                <div class="class-schedule">
+                    <strong>Schedule:</strong> Saturday<br>
+                    9:00 AM - 11:00 AM
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2 class="section-title">Why Flow Jiu-Jitsu?</h2>
+        <div class="about-content">
+            <p>At Flow Jiu-Jitsu, we believe in the transformative power of Brazilian Jiu-Jitsu. Our academy combines traditional technique with modern training methods to create an environment where students of all levels can thrive.</p>
+            <p>Whether you're looking to improve your fitness, learn self-defense, or compete at the highest levels, our experienced instructors are here to guide you every step of the way.</p>
+        </div>
+        
+        <div class="benefits-grid">
+            <div class="benefit">
+                <div class="benefit-icon">💪</div>
+                <h3>Build Strength</h3>
+                <p>Develop functional strength and conditioning through dynamic training</p>
+            </div>
+            
+            <div class="benefit">
+                <div class="benefit-icon">🧠</div>
+                <h3>Mental Focus</h3>
+                <p>Sharpen your mind through strategic problem-solving on the mats</p>
+            </div>
+            
+            <div class="benefit">
+                <div class="benefit-icon">🤝</div>
+                <h3>Community</h3>
+                <p>Join a supportive family of practitioners dedicated to growth</p>
+            </div>
+            
+            <div class="benefit">
+                <div class="benefit-icon">🥋</div>
+                <h3>Expert Instruction</h3>
+                <p>Learn from experienced black belt instructors with proven results</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2 class="section-title">Get Started Today</h2>
+        <div class="contact-info">
+            <div class="contact-item">
+                <h3>Location</h3>
+                <p>Johannesburg, Gauteng<br>South Africa</p>
+            </div>
+            
+            <div class="contact-item">
+                <h3>Contact</h3>
+                <p>Email: <a href="mailto:info@flowjiujitsu.co.za">info@flowjiujitsu.co.za</a><br>
+                Phone: +27 XX XXX XXXX</p>
+            </div>
+            
+            <div class="contact-item">
+                <h3>Follow Us</h3>
+                <p>Instagram: @flowjiujitsu<br>
+                Facebook: Flow Jiu-Jitsu</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style="width: 60px; height: 60px; margin-bottom: 20px; opacity: 0.6;">
+            <g transform="translate(100, 100)">
+                <circle cx="0" cy="-60" r="26" fill="#8b7bb8"/>
+                <circle cx="0" cy="-60" r="26" fill="#8b7bb8" transform="rotate(72)"/>
+                <circle cx="0" cy="-60" r="26" fill="#8b7bb8" transform="rotate(144)"/>
+                <circle cx="0" cy="-60" r="26" fill="#8b7bb8" transform="rotate(216)"/>
+                <circle cx="0" cy="-60" r="26" fill="#8b7bb8" transform="rotate(288)"/>
+                <circle cx="0" cy="0" r="18" fill="#ffd966"/>
+                <circle cx="0" cy="0" r="9" fill="#fde047"/>
+            </g>
+        </svg>
+        <p>&copy; 2025 Flow Jiu-Jitsu. All rights reserved.</p>
+        <p style="font-size: 0.9em; opacity: 0.7;">Excellence in martial arts training.</p>
+    </footer>
+</body>
+</html>
