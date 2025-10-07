@@ -15,6 +15,11 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             color: #2d3748;
             line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+        
+        html {
+            scroll-behavior: smooth;
         }
         
         /* Navigation */
@@ -219,9 +224,12 @@
         /* Benefits */
         .benefits-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
             margin-top: 50px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
         }
         
         .benefit {
@@ -382,28 +390,26 @@
                 <h3>Fundamentals</h3>
                 <p>Perfect for beginners. Learn the essential techniques and principles of Brazilian Jiu-Jitsu in a supportive environment.</p>
                 <div class="class-schedule">
-                    <strong>Schedule:</strong> Mon, Wed, Fri<br>
-                    6:00 AM - 7:00 AM<br>
-                    6:30 PM - 7:30 PM
+                    <strong>Schedule:</strong> Mon, Tue, Wed, Thu<br>
+                    5:30 PM - 6:30 PM
                 </div>
             </div>
             
             <div class="class-card">
-                <h3>Advanced Training</h3>
+                <h3>Kids Jiu-Jitsu</h3>
+                <p>Building confidence, discipline, and fitness in young athletes through the art of Brazilian Jiu-Jitsu.</p>
+                <div class="class-schedule">
+                    <strong>Schedule:</strong> Mon, Tue, Wed, Thu<br>
+                    4:30 PM - 5:30 PM
+                </div>
+            </div>
+            
+            <div class="class-card">
+                <h3>Intermediate/Advanced</h3>
                 <p>For experienced practitioners looking to refine their skills and take their game to the next level.</p>
                 <div class="class-schedule">
-                    <strong>Schedule:</strong> Tue, Thu<br>
-                    7:00 AM - 8:30 AM<br>
-                    7:30 PM - 9:00 PM
-                </div>
-            </div>
-            
-            <div class="class-card">
-                <h3>Open Mat</h3>
-                <p>Free training sessions where you can drill techniques, spar, and work on your game at your own pace.</p>
-                <div class="class-schedule">
-                    <strong>Schedule:</strong> Saturday<br>
-                    9:00 AM - 11:00 AM
+                    <strong>Schedule:</strong> Mon, Tue, Wed, Thu<br>
+                    6:30 PM - 7:30 PM
                 </div>
             </div>
         </div>
@@ -411,7 +417,7 @@
 
     <!-- About Section -->
     <section id="about" class="about">
-        <h2 class="section-title">Why Flow Jiu-Jitsu?</h2>
+        <h2 class="section-title">Why Jiu-Jitsu?</h2>
         <div class="about-content">
             <p>At Flow Jiu-Jitsu, we believe in the transformative power of Brazilian Jiu-Jitsu. Our academy combines traditional technique with modern training methods to create an environment where students of all levels can thrive.</p>
             <p>Whether you're looking to improve your fitness, learn self-defense, or compete at the highest levels, our experienced instructors are here to guide you every step of the way.</p>
@@ -435,12 +441,6 @@
                 <h3>Community</h3>
                 <p>Join a supportive family of practitioners dedicated to growth</p>
             </div>
-            
-            <div class="benefit">
-                <div class="benefit-icon">🥋</div>
-                <h3>Expert Instruction</h3>
-                <p>Learn from experienced black belt instructors with proven results</p>
-            </div>
         </div>
     </section>
 
@@ -450,18 +450,18 @@
         <div class="contact-info">
             <div class="contact-item">
                 <h3>Location</h3>
-                <p>Johannesburg, Gauteng<br>South Africa</p>
+                <p>Pretoria<br>South Africa</p>
             </div>
             
             <div class="contact-item">
                 <h3>Contact</h3>
-                <p>Email: <a href="mailto:info@flowjiujitsu.co.za">info@flowjiujitsu.co.za</a><br>
-                Phone: +27 XX XXX XXXX</p>
+                <p>Email: <a href="mailto:flowjiujitsu@gmail.com">flowjiujitsu@gmail.com</a><br>
+                Phone/WhatsApp: <a href="tel:+27641816010">+27 64 181 6010</a></p>
             </div>
             
             <div class="contact-item">
                 <h3>Follow Us</h3>
-                <p>Instagram: @flowjiujitsu<br>
+                <p>Instagram: <a href="https://instagram.com/flowjiujitsugym" target="_blank">@flowjiujitsugym</a><br>
                 Facebook: Flow Jiu-Jitsu</p>
             </div>
         </div>
