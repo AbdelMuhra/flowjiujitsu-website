@@ -50,8 +50,8 @@
         }
         
         .logo-nav svg {
-            width: 45px;
-            height: 45px;
+            width: 60px;
+            height: 60px;
         }
         
         .logo-text-nav {
@@ -105,8 +105,8 @@
         }
         
         .hero svg {
-            width: 150px;
-            height: 150px;
+            width: 200px;
+            height: 200px;
             margin-bottom: 30px;
         }
         
@@ -162,6 +162,101 @@
             text-align: center;
             margin-bottom: 60px;
             color: #2d3748;
+        }
+        
+        /* Schedule Section */
+        .schedule-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+        
+        .schedule-table {
+            width: 100%;
+            min-width: 700px;
+            border-collapse: collapse;
+            background: white;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        
+        .schedule-table th {
+            background: linear-gradient(135deg, #8b7bb8 0%, #6b5b9a 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-weight: 700;
+            font-size: 1.1em;
+        }
+        
+        .schedule-table th:first-child {
+            text-align: left;
+            padding-left: 30px;
+        }
+        
+        .schedule-table td {
+            padding: 20px;
+            border-bottom: 1px solid #e2e8f0;
+            text-align: center;
+        }
+        
+        .schedule-table td:first-child {
+            font-weight: 700;
+            color: #2d3748;
+            background: #f8f9fa;
+            text-align: left;
+            padding-left: 30px;
+            white-space: nowrap;
+        }
+        
+        .schedule-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .schedule-table tr:hover td {
+            background: #f8f9fa;
+        }
+        
+        .class-slot {
+            background: #f0edf7;
+            padding: 12px;
+            border-radius: 6px;
+            font-size: 0.9em;
+            font-weight: 600;
+            color: #6b5b9a;
+            margin: 2px 0;
+        }
+        
+        .class-slot.kids {
+            background: #fef3c7;
+            color: #92400e;
+        }
+        
+        .class-slot.fundamentals {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+        
+        .class-slot.advanced {
+            background: #f0edf7;
+            color: #6b5b9a;
+        }
+        
+        .class-slot.open-mat {
+            background: #dcfce7;
+            color: #166534;
+        }
+        
+        .class-slot.comp {
+            background: #fee2e2;
+            color: #991b1b;
+        }
+        
+        .empty-slot {
+            color: #cbd5e0;
+            font-size: 0.9em;
         }
         
         /* Classes Grid */
@@ -329,6 +424,20 @@
             .section-title {
                 font-size: 2em;
             }
+            
+            .schedule-table {
+                font-size: 0.85em;
+            }
+            
+            .schedule-table th,
+            .schedule-table td {
+                padding: 12px 8px;
+            }
+            
+            .schedule-table th:first-child,
+            .schedule-table td:first-child {
+                padding-left: 12px;
+            }
         }
     </style>
 </head>
@@ -337,16 +446,20 @@
     <nav>
         <div class="nav-container">
             <a href="#" class="logo-nav">
-                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                    <g transform="translate(100, 100)">
-                        <circle cx="0" cy="-60" r="26" fill="#9b7ed6"/>
-                        <circle cx="0" cy="-60" r="26" fill="#8b6fc4" transform="rotate(72)"/>
-                        <circle cx="0" cy="-60" r="26" fill="#9b7ed6" transform="rotate(144)"/>
-                        <circle cx="0" cy="-60" r="26" fill="#8b6fc4" transform="rotate(216)"/>
-                        <circle cx="0" cy="-60" r="26" fill="#9b7ed6" transform="rotate(288)"/>
-                        <circle cx="0" cy="0" r="18" fill="#fef3c7"/>
-                        <circle cx="0" cy="0" r="9" fill="#fde047"/>
+                <svg viewBox="0 0 2000 2000" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="2000" height="2000" fill="#ffffff"/>
+                    <g transform="translate(1000, 750)">
+                        <circle cx="0" cy="-160" r="70" fill="#9b7ed6"/>
+                        <circle cx="0" cy="-160" r="70" fill="#9b7ed6" transform="rotate(72)"/>
+                        <circle cx="0" cy="-160" r="70" fill="#9b7ed6" transform="rotate(144)"/>
+                        <circle cx="0" cy="-160" r="70" fill="#9b7ed6" transform="rotate(216)"/>
+                        <circle cx="0" cy="-160" r="70" fill="#9b7ed6" transform="rotate(288)"/>
+                        <circle cx="0" cy="0" r="50" fill="#fef3c7"/>
+                        <circle cx="0" cy="0" r="25" fill="#fde047"/>
                     </g>
+                    <text x="1000" y="1300" font-family="Arial, sans-serif" font-size="360" font-weight="900" fill="#2d2d3d" text-anchor="middle" letter-spacing="20">FLOW</text>
+                    <line x1="400" y1="1425" x2="1600" y2="1425" stroke="#9b7ed6" stroke-width="15"/>
+                    <text x="1000" y="1600" font-family="Arial, sans-serif" font-size="120" font-weight="600" fill="#2d2d3d" text-anchor="middle" letter-spacing="40">JIU-JITSU</text>
                 </svg>
                 <div class="logo-text-nav">
                     <div class="main">FLOW</div>
@@ -354,6 +467,7 @@
                 </div>
             </a>
             <ul>
+                <li><a href="#schedule">Schedule</a></li>
                 <li><a href="#classes">Classes</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -364,19 +478,88 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                <g transform="translate(100, 100)">
-                    <circle cx="0" cy="-60" r="26" fill="#ffffff"/>
-                    <circle cx="0" cy="-60" r="26" fill="#e8e0f5" transform="rotate(72)"/>
-                    <circle cx="0" cy="-60" r="26" fill="#ffffff" transform="rotate(144)"/>
-                    <circle cx="0" cy="-60" r="26" fill="#e8e0f5" transform="rotate(216)"/>
-                    <circle cx="0" cy="-60" r="26" fill="#ffffff" transform="rotate(288)"/>
-                    <circle cx="0" cy="0" r="18" fill="#fef3c7"/>
-                    <circle cx="0" cy="0" r="9" fill="#fde047"/>
+            <svg viewBox="0 0 2000 2000" xmlns="http://www.w3.org/2000/svg">
+                <rect width="2000" height="2000" fill="none"/>
+                <g transform="translate(1000, 750)">
+                    <circle cx="0" cy="-160" r="70" fill="#9b7ed6"/>
+                    <circle cx="0" cy="-160" r="70" fill="#9b7ed6" transform="rotate(72)"/>
+                    <circle cx="0" cy="-160" r="70" fill="#9b7ed6" transform="rotate(144)"/>
+                    <circle cx="0" cy="-160" r="70" fill="#9b7ed6" transform="rotate(216)"/>
+                    <circle cx="0" cy="-160" r="70" fill="#9b7ed6" transform="rotate(288)"/>
+                    <circle cx="0" cy="0" r="50" fill="#fef3c7"/>
+                    <circle cx="0" cy="0" r="25" fill="#fde047"/>
                 </g>
+                <text x="1000" y="1300" font-family="Arial, sans-serif" font-size="360" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="20">FLOW</text>
+                <line x1="400" y1="1425" x2="1600" y2="1425" stroke="#ffffff" stroke-width="15"/>
+                <text x="1000" y="1600" font-family="Arial, sans-serif" font-size="120" font-weight="600" fill="#ffffff" text-anchor="middle" letter-spacing="40">JIU-JITSU</text>
             </svg>
-            <h1>FLOW</h1>
-            <div class="subtitle">JIU-JITSU</div>
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section id="schedule">
+        <h2 class="section-title">Weekly Schedule</h2>
+        <div class="schedule-container">
+            <table class="schedule-table">
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Monday</th>
+                        <th>Tuesday</th>
+                        <th>Wednesday</th>
+                        <th>Thursday</th>
+                        <th>Friday</th>
+                        <th>Saturday</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>06:30 - 07:30</td>
+                        <td><span class="empty-slot">—</span></td>
+                        <td><div class="class-slot fundamentals">Fundamentals</div></td>
+                        <td><span class="empty-slot">—</span></td>
+                        <td><div class="class-slot fundamentals">Fundamentals</div></td>
+                        <td><span class="empty-slot">—</span></td>
+                        <td><span class="empty-slot">—</span></td>
+                    </tr>
+                    <tr>
+                        <td>12:00 - 13:00</td>
+                        <td><span class="empty-slot">—</span></td>
+                        <td><div class="class-slot fundamentals">Fundamentals</div></td>
+                        <td><span class="empty-slot">—</span></td>
+                        <td><div class="class-slot fundamentals">Fundamentals</div></td>
+                        <td><span class="empty-slot">—</span></td>
+                        <td><span class="empty-slot">—</span></td>
+                    </tr>
+                    <tr>
+                        <td>16:30 - 17:30</td>
+                        <td><div class="class-slot kids">Kids Jiu-Jitsu</div></td>
+                        <td><div class="class-slot kids">Kids Jiu-Jitsu</div></td>
+                        <td><div class="class-slot kids">Kids Jiu-Jitsu</div></td>
+                        <td><div class="class-slot kids">Kids Jiu-Jitsu</div></td>
+                        <td><span class="empty-slot">—</span></td>
+                        <td><div class="class-slot comp">Comp Class</div></td>
+                    </tr>
+                    <tr>
+                        <td>17:30 - 18:30</td>
+                        <td><div class="class-slot fundamentals">Fundamentals</div></td>
+                        <td><div class="class-slot fundamentals">Fundamentals</div></td>
+                        <td><div class="class-slot fundamentals">Fundamentals</div></td>
+                        <td><div class="class-slot fundamentals">Fundamentals</div></td>
+                        <td><div class="class-slot open-mat">Open Mat</div></td>
+                        <td><span class="empty-slot">—</span></td>
+                    </tr>
+                    <tr>
+                        <td>18:30 - 19:30</td>
+                        <td><div class="class-slot advanced">Intermediate/Advanced</div></td>
+                        <td><div class="class-slot advanced">Intermediate/Advanced</div></td>
+                        <td><div class="class-slot advanced">Intermediate/Advanced</div></td>
+                        <td><div class="class-slot advanced">Intermediate/Advanced</div></td>
+                        <td><span class="empty-slot">—</span></td>
+                        <td><span class="empty-slot">—</span></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </section>
 
@@ -388,31 +571,17 @@
             <div class="class-card">
                 <h3>Kids Jiu-Jitsu</h3>
                 <p>Building confidence, discipline, and fitness in young athletes through the art of Brazilian Jiu-Jitsu.</p>
-                <div class="class-schedule">
-                    <strong>Schedule:</strong> Mon, Tue, Wed, Thu<br>
-                    4:30 PM - 5:30 PM
-                </div>
             </div>
 
             <div class="class-card">
                 <h3>Fundamentals Jiu-Jitsu</h3>
                 <p>Perfect for beginners. Learn the essential techniques and principles of Brazilian Jiu-Jitsu in a supportive environment.</p>
-                <div class="class-schedule">
-                    <strong>Schedule:</strong> Mon, Tue, Wed, Thu<br> <br>
-                    6:30 AM - 7:30 AM (Tuesdays & Thursdays Only) <br> <br>
-                    12:00 PM - 13:00 PM (Tuesdays & Thursdays Only) <br> <br>
-                    5:30 PM - 6:30 PM
-                </div>
             </div>
             
             
             <div class="class-card">
                 <h3>Intermediate/Advanced Jiu-Jitsu</h3>
                 <p>For experienced practitioners looking to refine their skills and take their game to the next level.</p>
-                <div class="class-schedule">
-                    <strong>Schedule:</strong> Mon, Tue, Wed, Thu<br>
-                    6:30 PM - 7:30 PM
-                </div>
             </div>
 
         </div>
@@ -454,7 +623,7 @@
             
             <div class="contact-item">
                 <h3>Contact</h3>
-                <p>Email: <a href="mailto:flowjiujitsu@gmail.com">flowjiujitsu@gmail.com</a><br>
+                <p>Email: <a href="mailto:flowjiujitsugym@gmail.com">flowjiujitsugym@gmail.com</a><br>
                 WhatsApp: <a href="tel:+27641816010">+27 64 181 6010</a></p>
             </div>
             
@@ -467,16 +636,20 @@
 
     <!-- Footer -->
     <footer>
-        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style="width: 60px; height: 60px; margin-bottom: 20px; opacity: 0.6;">
-            <g transform="translate(100, 100)">
-                <circle cx="0" cy="-60" r="26" fill="#8b7bb8"/>
-                <circle cx="0" cy="-60" r="26" fill="#8b7bb8" transform="rotate(72)"/>
-                <circle cx="0" cy="-60" r="26" fill="#8b7bb8" transform="rotate(144)"/>
-                <circle cx="0" cy="-60" r="26" fill="#8b7bb8" transform="rotate(216)"/>
-                <circle cx="0" cy="-60" r="26" fill="#8b7bb8" transform="rotate(288)"/>
-                <circle cx="0" cy="0" r="18" fill="#ffd966"/>
-                <circle cx="0" cy="0" r="9" fill="#fde047"/>
+        <svg viewBox="0 0 2000 2000" xmlns="http://www.w3.org/2000/svg" style="width: 80px; height: 80px; margin-bottom: 20px; opacity: 0.6;">
+            <rect width="2000" height="2000" fill="none"/>
+            <g transform="translate(1000, 750)">
+                <circle cx="0" cy="-160" r="70" fill="#8b7bb8"/>
+                <circle cx="0" cy="-160" r="70" fill="#8b7bb8" transform="rotate(72)"/>
+                <circle cx="0" cy="-160" r="70" fill="#8b7bb8" transform="rotate(144)"/>
+                <circle cx="0" cy="-160" r="70" fill="#8b7bb8" transform="rotate(216)"/>
+                <circle cx="0" cy="-160" r="70" fill="#8b7bb8" transform="rotate(288)"/>
+                <circle cx="0" cy="0" r="50" fill="#ffd966"/>
+                <circle cx="0" cy="0" r="25" fill="#fde047"/>
             </g>
+            <text x="1000" y="1300" font-family="Arial, sans-serif" font-size="360" font-weight="900" fill="#8b7bb8" text-anchor="middle" letter-spacing="20">FLOW</text>
+            <line x1="400" y1="1425" x2="1600" y2="1425" stroke="#8b7bb8" stroke-width="15"/>
+            <text x="1000" y="1600" font-family="Arial, sans-serif" font-size="120" font-weight="600" fill="#8b7bb8" text-anchor="middle" letter-spacing="40">JIU-JITSU</text>
         </svg>
         <p>&copy; 2025 Flow Jiu-Jitsu. All rights reserved.</p>
         <p style="font-size: 0.9em; opacity: 0.7;">Jiu-Jitsu for Everybody</p>
