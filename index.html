@@ -93,7 +93,7 @@
         /* Hero Section */
         .hero {
             margin-top: 85px;
-            background: linear-gradient(135deg, #8b7bb8 0%, #6b5b9a 100%);
+            background: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
             color: white;
             padding: 120px 30px;
             text-align: center;
@@ -105,9 +105,9 @@
         }
         
         .hero svg {
-            width: 200px;
-            height: 200px;
-            margin-bottom: 30px;
+            width: 300px;
+            height: 300px;
+            margin-bottom: 20px;
         }
         
         .hero h1 {
@@ -164,9 +164,9 @@
             color: #2d3748;
         }
         
-        /* Schedule Section */
+        /* Schedule Section - Improved Responsiveness */
         .schedule-container {
-            max-width: 1000px;
+            max-width: 100%;
             margin: 0 auto;
             overflow-x: auto;
             -webkit-overflow-scrolling: touch;
@@ -174,7 +174,7 @@
         
         .schedule-table {
             width: 100%;
-            min-width: 700px;
+            min-width: 600px;
             border-collapse: collapse;
             background: white;
             box-shadow: 0 4px 20px rgba(0,0,0,0.1);
@@ -185,21 +185,22 @@
         .schedule-table th {
             background: linear-gradient(135deg, #8b7bb8 0%, #6b5b9a 100%);
             color: white;
-            padding: 20px;
+            padding: 16px 10px;
             text-align: center;
             font-weight: 700;
-            font-size: 1.1em;
+            font-size: 1em;
         }
         
         .schedule-table th:first-child {
             text-align: left;
-            padding-left: 30px;
+            padding-left: 20px;
         }
         
         .schedule-table td {
-            padding: 20px;
+            padding: 16px 10px;
             border-bottom: 1px solid #e2e8f0;
             text-align: center;
+            vertical-align: middle;
         }
         
         .schedule-table td:first-child {
@@ -207,8 +208,9 @@
             color: #2d3748;
             background: #f8f9fa;
             text-align: left;
-            padding-left: 30px;
+            padding-left: 20px;
             white-space: nowrap;
+            font-size: 0.9em;
         }
         
         .schedule-table tr:last-child td {
@@ -221,12 +223,14 @@
         
         .class-slot {
             background: #f0edf7;
-            padding: 12px;
+            padding: 8px 6px;
             border-radius: 6px;
-            font-size: 0.9em;
+            font-size: 0.85em;
             font-weight: 600;
             color: #6b5b9a;
             margin: 2px 0;
+            display: inline-block;
+            width: 100%;
         }
         
         .class-slot.kids {
@@ -406,6 +410,17 @@
         }
         
         /* Responsive */
+        @media (max-width: 1024px) {
+            .schedule-table {
+                min-width: 700px;
+            }
+            
+            .schedule-table th,
+            .schedule-table td {
+                padding: 14px 8px;
+            }
+        }
+        
         @media (max-width: 768px) {
             nav ul {
                 display: none;
@@ -426,17 +441,40 @@
             }
             
             .schedule-table {
-                font-size: 0.85em;
+                min-width: 600px;
+                font-size: 0.9em;
             }
             
             .schedule-table th,
             .schedule-table td {
-                padding: 12px 8px;
+                padding: 12px 6px;
             }
             
             .schedule-table th:first-child,
             .schedule-table td:first-child {
                 padding-left: 12px;
+            }
+            
+            .class-slot {
+                font-size: 0.8em;
+                padding: 6px 4px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .schedule-table {
+                min-width: 500px;
+                font-size: 0.85em;
+            }
+            
+            .schedule-table th,
+            .schedule-table td {
+                padding: 10px 4px;
+            }
+            
+            .class-slot {
+                font-size: 0.75em;
+                padding: 5px 3px;
             }
         }
     </style>
@@ -461,10 +499,10 @@
                     <line x1="400" y1="1425" x2="1600" y2="1425" stroke="#9b7ed6" stroke-width="15"/>
                     <text x="1000" y="1600" font-family="Arial, sans-serif" font-size="120" font-weight="600" fill="#2d2d3d" text-anchor="middle" letter-spacing="40">JIU-JITSU</text>
                 </svg>
-                <div class="logo-text-nav">
+                <!-- <div class="logo-text-nav">
                     <div class="main">FLOW</div>
                     <div class="sub">JIU-JITSU</div>
-                </div>
+                </div> -->
             </a>
             <ul>
                 <li><a href="#schedule">Schedule</a></li>
@@ -489,9 +527,9 @@
                     <circle cx="0" cy="0" r="50" fill="#fef3c7"/>
                     <circle cx="0" cy="0" r="25" fill="#fde047"/>
                 </g>
-                <text x="1000" y="1300" font-family="Arial, sans-serif" font-size="360" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="20">FLOW</text>
-                <line x1="400" y1="1425" x2="1600" y2="1425" stroke="#ffffff" stroke-width="15"/>
-                <text x="1000" y="1600" font-family="Arial, sans-serif" font-size="120" font-weight="600" fill="#ffffff" text-anchor="middle" letter-spacing="40">JIU-JITSU</text>
+                <text x="1000" y="1300" font-family="Arial, sans-serif" font-size="360" font-weight="900" fill="#2d2d3d" text-anchor="middle" letter-spacing="20">FLOW</text>
+                <line x1="400" y1="1425" x2="1600" y2="1425" stroke="#9b7ed6" stroke-width="15"/>
+                <text x="1000" y="1600" font-family="Arial, sans-serif" font-size="120" font-weight="600" fill="#2d2d3d" text-anchor="middle" letter-spacing="40">JIU-JITSU</text>
             </svg>
         </div>
     </section>
@@ -515,18 +553,18 @@
                 <tbody>
                     <tr>
                         <td>06:30 - 07:30</td>
-                        <td><span class="empty-slot">—</span></td>
                         <td><div class="class-slot fundamentals">Fundamentals</div></td>
-                        <td><span class="empty-slot">—</span></td>
+                        <td><div class="class-slot fundamentals">Fundamentals</div></td>
+                        <td><div class="class-slot fundamentals">Fundamentals</div></td>
                         <td><div class="class-slot fundamentals">Fundamentals</div></td>
                         <td><span class="empty-slot">—</span></td>
                         <td><span class="empty-slot">—</span></td>
                     </tr>
                     <tr>
                         <td>12:00 - 13:00</td>
-                        <td><span class="empty-slot">—</span></td>
                         <td><div class="class-slot fundamentals">Fundamentals</div></td>
-                        <td><span class="empty-slot">—</span></td>
+                        <td><div class="class-slot fundamentals">Fundamentals</div></td>
+                        <td><div class="class-slot fundamentals">Fundamentals</div></td>
                         <td><div class="class-slot fundamentals">Fundamentals</div></td>
                         <td><span class="empty-slot">—</span></td>
                         <td><span class="empty-slot">—</span></td>
@@ -618,7 +656,7 @@
         <div class="contact-info">
             <div class="contact-item">
                 <h3>Location</h3>
-                <p>Pretoria,<br> South Africa 🇿🇦</p>
+                <p>TBA,<br>Pretoria,<br> South Africa 🇿🇦</p>
             </div>
             
             <div class="contact-item">
@@ -647,12 +685,12 @@
                 <circle cx="0" cy="0" r="50" fill="#ffd966"/>
                 <circle cx="0" cy="0" r="25" fill="#fde047"/>
             </g>
-            <text x="1000" y="1300" font-family="Arial, sans-serif" font-size="360" font-weight="900" fill="#8b7bb8" text-anchor="middle" letter-spacing="20">FLOW</text>
-            <line x1="400" y1="1425" x2="1600" y2="1425" stroke="#8b7bb8" stroke-width="15"/>
-            <text x="1000" y="1600" font-family="Arial, sans-serif" font-size="120" font-weight="600" fill="#8b7bb8" text-anchor="middle" letter-spacing="40">JIU-JITSU</text>
+            <text x="1000" y="1300" font-family="Arial, sans-serif" font-size="360" font-weight="900" fill="white" text-anchor="middle" letter-spacing="20">FLOW</text>
+            <line x1="400" y1="1425" x2="1600" y2="1425" stroke="#9b7ed6" stroke-width="15"/>
+            <text x="1000" y="1600" font-family="Arial, sans-serif" font-size="120" font-weight="600" fill="white" text-anchor="middle" letter-spacing="40">JIU-JITSU</text>
         </svg>
         <p>&copy; 2025 Flow Jiu-Jitsu. All rights reserved.</p>
-        <p style="font-size: 0.9em; opacity: 0.7;">Jiu-Jitsu for Everybody</p>
+        <!-- <p style="font-size: 0.9em; opacity: 0.7;">Jiu-Jitsu for Everybody</p> -->
     </footer>
 </body>
 </html>
