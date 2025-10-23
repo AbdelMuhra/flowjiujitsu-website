@@ -164,6 +164,32 @@
             color: #2d3748;
         }
         
+        /* Memberships Section */
+        .memberships {
+            background: #f8f9fa;
+        }
+        
+        .memberships-svg-container {
+            max-width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .memberships-svg-container svg {
+            max-width: 1200px;
+            width: 100%;
+            height: auto;
+        }
+        
+        .membership-note {
+            text-align: center;
+            margin-top: 40px;
+            color: #4a5568;
+            font-size: 1.1em;
+        }
+        
         /* Schedule Section - Improved Responsiveness */
         .schedule-container {
             max-width: 100%;
@@ -499,15 +525,12 @@
                     <line x1="400" y1="1425" x2="1600" y2="1425" stroke="#9b7ed6" stroke-width="15"/>
                     <text x="1000" y="1600" font-family="Arial, sans-serif" font-size="120" font-weight="600" fill="#2d2d3d" text-anchor="middle" letter-spacing="40">JIU-JITSU</text>
                 </svg>
-                <!-- <div class="logo-text-nav">
-                    <div class="main">FLOW</div>
-                    <div class="sub">JIU-JITSU</div>
-                </div> -->
             </a>
             <ul>
                 <li><a href="#schedule">Schedule</a></li>
                 <li><a href="#classes">Classes</a></li>
                 <li><a href="#about">About</a></li>
+                <li><a href="#memberships">Memberships</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -534,6 +557,7 @@
         </div>
     </section>
 
+    
     <!-- Schedule Section -->
     <section id="schedule">
         <h2 class="section-title">Weekly Schedule</h2>
@@ -600,28 +624,25 @@
             </table>
         </div>
     </section>
-
+    
     <!-- Classes Section -->
     <section id="classes">
         <h2 class="section-title">Our Classes</h2>
         <div class="classes-grid">
-
             <div class="class-card">
                 <h3>Kids Jiu-Jitsu</h3>
                 <p>Building confidence, discipline, and fitness in young athletes through the art of Brazilian Jiu-Jitsu.</p>
             </div>
-
+            
             <div class="class-card">
                 <h3>Fundamentals Jiu-Jitsu</h3>
                 <p>Perfect for beginners. Learn the essential techniques and principles of Brazilian Jiu-Jitsu in a supportive environment.</p>
             </div>
             
-            
             <div class="class-card">
                 <h3>Intermediate/Advanced Jiu-Jitsu</h3>
                 <p>For experienced practitioners looking to refine their skills and take their game to the next level.</p>
             </div>
-
         </div>
     </section>
 
@@ -647,6 +668,62 @@
                 <h3>Community</h3>
                 <p>Join a supportive family of practitioners dedicated to growth</p>
             </div>
+        </div>
+    </section>
+    <!-- Memberships Section -->
+    <section id="memberships" class="memberships">
+        <h2 class="section-title">Memberships</h2>
+        <div class="memberships-svg-container">
+            <svg viewBox="0 0 1200 400" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <filter id="shadow">
+                        <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.1"/>
+                    </filter>
+                </defs>
+                
+                <!-- Card 1: Kids All-Access -->
+                <g filter="url(#shadow)">
+                    <rect x="50" y="50" width="260" height="220" rx="12" fill="white" stroke="#9b7ed6" stroke-width="2"/>
+                    <text x="170" y="95" font-family="Arial Black, sans-serif" font-size="20" font-weight="900" letter-spacing="1" fill="#2d3748" text-anchor="middle">KIDS</text>
+                    <text x="170" y="120" font-family="Arial Black, sans-serif" font-size="20" font-weight="900" letter-spacing="1" fill="#2d3748" text-anchor="middle">ALL-ACCESS</text>
+                    <text x="170" y="150" font-family="system-ui, sans-serif" font-size="13" fill="#4a5568" text-anchor="middle">Under 18 Years</text>
+                    <rect x="80" y="165" width="180" height="1" fill="#9b7ed6" opacity="0.3"/>
+                    <text x="170" y="215" font-family="Arial Black, sans-serif" font-size="38" font-weight="900" fill="#9b7ed6" text-anchor="middle">R600</text>
+                    <text x="170" y="240" font-family="system-ui, sans-serif" font-size="14" fill="#4a5568" text-anchor="middle">per month</text>
+                </g>
+                
+                <!-- Card 2: Student All-Access -->
+                <g filter="url(#shadow)">
+                    <rect x="340" y="50" width="260" height="220" rx="12" fill="white" stroke="#9b7ed6" stroke-width="2"/>
+                    <text x="470" y="95" font-family="Arial Black, sans-serif" font-size="20" font-weight="900" letter-spacing="1" fill="#2d3748" text-anchor="middle">STUDENT</text>
+                    <text x="470" y="120" font-family="Arial Black, sans-serif" font-size="20" font-weight="900" letter-spacing="1" fill="#2d3748" text-anchor="middle">ALL-ACCESS</text>
+                    <text x="470" y="150" font-family="system-ui, sans-serif" font-size="13" fill="#4a5568" text-anchor="middle">Valid Student Card</text>
+                    <rect x="370" y="165" width="180" height="1" fill="#9b7ed6" opacity="0.3"/>
+                    <text x="470" y="215" font-family="Arial Black, sans-serif" font-size="38" font-weight="900" fill="#9b7ed6" text-anchor="middle">R750</text>
+                    <text x="470" y="240" font-family="system-ui, sans-serif" font-size="14" fill="#4a5568" text-anchor="middle">per month</text>
+                </g>
+                
+                <!-- Card 3: Adult All-Access -->
+                <g filter="url(#shadow)">
+                    <rect x="630" y="50" width="260" height="220" rx="12" fill="#9b7ed6"/>
+                    <text x="760" y="95" font-family="Arial Black, sans-serif" font-size="20" font-weight="900" letter-spacing="1" fill="white" text-anchor="middle">ADULT</text>
+                    <text x="760" y="120" font-family="Arial Black, sans-serif" font-size="20" font-weight="900" letter-spacing="1" fill="white" text-anchor="middle">ALL-ACCESS</text>
+                    <text x="760" y="150" font-family="system-ui, sans-serif" font-size="13" fill="white" opacity="0.9" text-anchor="middle">Full Access</text>
+                    <rect x="660" y="165" width="180" height="1" fill="white" opacity="0.4"/>
+                    <text x="760" y="215" font-family="Arial Black, sans-serif" font-size="38" font-weight="900" fill="#ffd966" text-anchor="middle">R900</text>
+                    <text x="760" y="240" font-family="system-ui, sans-serif" font-size="14" fill="white" text-anchor="middle">per month</text>
+                </g>
+                
+                <!-- Card 4: Drop In -->
+                <g filter="url(#shadow)">
+                    <rect x="920" y="50" width="260" height="220" rx="12" fill="white" stroke="#ffd966" stroke-width="2"/>
+                    <text x="1050" y="110" font-family="Arial Black, sans-serif" font-size="20" font-weight="900" letter-spacing="1" fill="#2d3748" text-anchor="middle">DROP IN</text>
+                    <text x="1050" y="140" font-family="system-ui, sans-serif" font-size="13" fill="#4a5568" text-anchor="middle">Single Session</text>
+                    <rect x="950" y="155" width="180" height="1" fill="#ffd966" opacity="0.5"/>
+                    <text x="1050" y="205" font-family="Arial Black, sans-serif" font-size="38" font-weight="900" fill="#ffd966" text-anchor="middle">R200</text>
+                    <text x="1050" y="230" font-family="system-ui, sans-serif" font-size="14" fill="#4a5568" text-anchor="middle">per session</text>
+                </g>
+            </svg>
         </div>
     </section>
 
@@ -690,7 +767,6 @@
             <text x="1000" y="1600" font-family="Arial, sans-serif" font-size="120" font-weight="600" fill="white" text-anchor="middle" letter-spacing="40">JIU-JITSU</text>
         </svg>
         <p>&copy; 2025 Flow Jiu-Jitsu. All rights reserved.</p>
-        <!-- <p style="font-size: 0.9em; opacity: 0.7;">Jiu-Jitsu for Everybody</p> -->
     </footer>
 </body>
 </html>
