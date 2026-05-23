@@ -500,6 +500,78 @@
             text-decoration: underline;
         }
 
+        /* ── Additional Info ── */
+        .info-section {
+            background: var(--bg-mid);
+            padding: 80px 30px;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .info-inner {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .info-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        .info-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 36px 32px;
+            display: flex;
+            gap: 22px;
+            align-items: flex-start;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .info-card:hover {
+            border-color: rgba(155,126,214,0.45);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+        }
+
+        .info-icon {
+            font-size: 2em;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .info-card h3 {
+            font-family: 'Arial Black', 'Helvetica Bold', sans-serif;
+            font-weight: 900;
+            font-size: 1.05em;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+
+        .info-card p {
+            color: var(--text-muted);
+            font-size: 0.97em;
+            line-height: 1.7;
+        }
+
+        .info-card .free-badge {
+            display: inline-block;
+            background: var(--yellow);
+            color: var(--charcoal);
+            font-family: 'Arial Black', sans-serif;
+            font-weight: 900;
+            font-size: 0.72em;
+            letter-spacing: 1.5px;
+            padding: 3px 10px;
+            border-radius: 4px;
+            margin-left: 8px;
+            vertical-align: middle;
+            text-transform: uppercase;
+        }
+
         /* ── Map ── */
         .map-section {
             background: var(--bg-dark);
@@ -604,7 +676,6 @@
             <div class="nav-links">
                 <ul>
                     <li><a href="#schedule">Schedule</a></li>
-                    <li><a href="#classes">Classes</a></li>
                     <li><a href="#packages">Packages</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#contact">Contact</a></li>
@@ -648,12 +719,12 @@
                     <div class="class-block cb-nogi-fund">
                         <div class="class-time">12:00 – 13:00</div>
                         <div class="class-name">No-Gi</div>
-                        <div class="class-label">Fundamentals</div>
+                        <div class="class-label">All Levels</div>
                     </div>
-                    <div class="class-block cb-nogi-int">
+                    <div class="class-block cb-nogi-fund">
                         <div class="class-time">18:00 – 19:30</div>
                         <div class="class-name">No-Gi</div>
-                        <div class="class-label">Fund / Int</div>
+                        <div class="class-label">All Levels</div>
                     </div>
                 </div>
             </div>
@@ -665,22 +736,22 @@
                     <div class="class-block cb-nogi-fund">
                         <div class="class-time">06:30 – 07:30</div>
                         <div class="class-name">No-Gi</div>
-                        <div class="class-label">Fundamentals</div>
+                        <div class="class-label">All Levels</div>
                     </div>
                     <div class="class-block cb-nogi-fund">
                         <div class="class-time">12:00 – 13:00</div>
                         <div class="class-name">No-Gi</div>
-                        <div class="class-label">Fundamentals</div>
+                        <div class="class-label">All Levels</div>
                     </div>
                     <div class="class-block cb-kids">
                         <div class="class-time">16:30 – 17:15</div>
                         <div class="class-name">Kids No-Gi</div>
                         <div class="class-label">Kids</div>
                     </div>
-                    <div class="class-block cb-nogi-int">
+                    <div class="class-block cb-nogi-fund">
                         <div class="class-time">18:00 – 19:30</div>
                         <div class="class-name">No-Gi</div>
-                        <div class="class-label">Fund / Int</div>
+                        <div class="class-label">All Levels</div>
                     </div>
                 </div>
             </div>
@@ -692,12 +763,12 @@
                     <div class="class-block cb-nogi-fund">
                         <div class="class-time">12:00 – 13:00</div>
                         <div class="class-name">No-Gi</div>
-                        <div class="class-label">Fundamentals</div>
+                        <div class="class-label">All Levels</div>
                     </div>
-                    <div class="class-block cb-nogi-int">
+                    <div class="class-block cb-nogi-fund">
                         <div class="class-time">18:00 – 19:30</div>
                         <div class="class-name">No-Gi</div>
-                        <div class="class-label">Fund / Int</div>
+                        <div class="class-label">All Levels</div>
                     </div>
                 </div>
             </div>
@@ -709,22 +780,22 @@
                     <div class="class-block cb-nogi-fund">
                         <div class="class-time">06:30 – 07:30</div>
                         <div class="class-name">No-Gi</div>
-                        <div class="class-label">Fundamentals</div>
+                        <div class="class-label">All Levels</div>
                     </div>
                     <div class="class-block cb-nogi-fund">
                         <div class="class-time">12:00 – 13:00</div>
                         <div class="class-name">No-Gi</div>
-                        <div class="class-label">Fundamentals</div>
+                        <div class="class-label">All Levels</div>
                     </div>
                     <div class="class-block cb-kids">
                         <div class="class-time">16:30 – 17:15</div>
                         <div class="class-name">Kids No-Gi</div>
                         <div class="class-label">Kids</div>
                     </div>
-                    <div class="class-block cb-nogi-int">
+                    <div class="class-block cb-nogi-fund">
                         <div class="class-time">18:00 – 19:30</div>
-                        <div class="class-name">No-Gi</div>
-                        <div class="class-label">Fund / Int</div>
+                        <div class="class-name">No-Gi / Gi</div>
+                        <div class="class-label">All Levels</div>
                     </div>
                 </div>
             </div>
@@ -756,32 +827,10 @@
         </div>
 
         <div class="schedule-legend">
-            <div class="sleg"><div class="sleg-dot" style="background:#3b82f6"></div>Fundamentals</div>
-            <div class="sleg"><div class="sleg-dot" style="background:#8b5cf6"></div>Fund / Intermediate</div>
+            <div class="sleg"><div class="sleg-dot" style="background:#3b82f6"></div>All Levels</div>
             <div class="sleg"><div class="sleg-dot" style="background:#fbbf24"></div>Kids</div>
             <div class="sleg"><div class="sleg-dot" style="background:#34d399"></div>Open Mat</div>
             <div class="sleg"><div class="sleg-dot" style="background:#f87171"></div>Competition</div>
-        </div>
-    </div>
-
-    <!-- Classes -->
-    <div class="classes-section" id="classes">
-        <div class="classes-inner">
-            <h2 class="section-title">OUR <span class="purple">CLASSES</span></h2>
-            <div class="classes-grid">
-                <div class="class-card">
-                    <h3>Kids Jiu-Jitsu</h3>
-                    <p>Building confidence, discipline, and fitness in young athletes through the art of Brazilian Jiu-Jitsu. Tuesdays &amp; Thursdays, 16:30–17:15.</p>
-                </div>
-                <div class="class-card">
-                    <h3>Fundamentals</h3>
-                    <p>Perfect for beginners. Learn the essential techniques and principles of Brazilian Jiu-Jitsu in a supportive environment.</p>
-                </div>
-                <div class="class-card">
-                    <h3>Intermediate / Advanced</h3>
-                    <p>For experienced practitioners looking to refine their skills and take their game to the next level.</p>
-                </div>
-            </div>
         </div>
     </div>
 
@@ -801,6 +850,29 @@
             <h2 class="section-title">BOOK A <span class="accent">CLASS</span></h2>
             <div class="iframe-wrapper">
                 <iframe src='https://app.octivfitness.com/widget/schedule?publicToken=df593fabe2000fc6308f0ff162463ce6e5529057' frameBorder='0' height='1000px' width='100%'>Your browser does not support iframes</iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Additional Information -->
+    <div class="info-section" id="info">
+        <div class="info-inner">
+            <h2 class="section-title">ADDITIONAL <span class="purple">INFORMATION</span></h2>
+            <div class="info-cards">
+                <div class="info-card">
+                    <div class="info-icon">🥋</div>
+                    <div>
+                        <h3>Trial Class <span class="free-badge">FREE</span></h3>
+                        <p>Not sure if jiu-jitsu is for you? Come in and try a class on us — no commitment, no cost. Just show up, get on the mats, and experience it for yourself.</p>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">🎯</div>
+                    <div>
+                        <h3>Private Classes</h3>
+                        <p>One-on-one coaching is available on request. Private sessions are tailored to your specific goals, whether you're a complete beginner, drilling competition prep, or working on a particular area of your game.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -880,7 +952,7 @@
             <line x1="400" y1="1425" x2="1600" y2="1425" stroke="#9b7ed6" stroke-width="15"/>
             <text x="1000" y="1600" font-family="Arial, sans-serif" font-size="120" font-weight="600" fill="white" text-anchor="middle" letter-spacing="40">JIU-JITSU</text>
         </svg>
-        <p>&copy; 2025 Flow Jiu-Jitsu. All rights reserved.</p>
+        <p>&copy; 2026 Flow Jiu-Jitsu. All rights reserved.</p>
     </footer>
 
 </body>
