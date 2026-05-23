@@ -500,6 +500,26 @@
             text-decoration: underline;
         }
 
+        /* ── Map ── */
+        .map-section {
+            background: var(--bg-dark);
+            border-top: 1px solid var(--border);
+        }
+
+        .map-wrapper {
+            width: 100%;
+            height: 420px;
+            display: block;
+            filter: grayscale(20%) contrast(1.05);
+        }
+
+        .map-wrapper iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+            display: block;
+        }
+
         /* ── Footer ── */
         footer {
             background: var(--bg-dark);
@@ -828,6 +848,18 @@
                     <p>Instagram: <a href="https://instagram.com/flowjiujitsugym" target="_blank">@flowjiujitsugym</a></p>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <!-- Map -->
+    <div class="map-section">
+        <div class="map-wrapper">
+            <iframe
+                src="https://maps.google.com/maps?q=Flow+Jiu-Jitsu,+22+Hibiscus+St,+Lynnwood+Ridge,+Pretoria,+South+Africa&output=embed"
+                allowfullscreen
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
         </div>
     </div>
 
