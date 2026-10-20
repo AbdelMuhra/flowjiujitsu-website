@@ -417,11 +417,12 @@
         /* ── Classes ── */
         .class-list {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 12px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px;
+            max-width: 900px;
         }
         .class-item {
-            padding: 24px;
+            padding: clamp(20px, 2.4vw, 26px);
             border: 1px solid var(--line);
             border-radius: var(--radius);
             background: var(--surface);
@@ -429,11 +430,11 @@
         }
         .class-item img {
             display: block;
-            width: calc(100% + 48px);
+            width: calc(100% + 2 * clamp(20px, 2.4vw, 26px));
             max-width: none;
             height: auto;
-            aspect-ratio: 4 / 3;
-            margin: -24px -24px 20px;
+            aspect-ratio: 16 / 9;
+            margin: calc(-1 * clamp(20px, 2.4vw, 26px)) calc(-1 * clamp(20px, 2.4vw, 26px)) 20px;
             object-fit: cover;
         }
         .class-item:nth-child(2) img { object-position: 50% 90%; }
@@ -441,16 +442,16 @@
             display: flex;
             align-items: center;
             gap: 10px;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             font-weight: 600;
             letter-spacing: -0.015em;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
         }
-        .dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; background: var(--c-all); }
+        .dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; background: var(--c-all); }
         .dot.kids { background: var(--c-kids); }
         .dot.open { background: var(--c-open); }
         .dot.comp { background: var(--c-comp); }
-        .class-item p { color: var(--muted); font-size: 0.94rem; }
+        .class-item p { color: var(--muted); font-size: 0.96rem; }
 
         /* ── Schedule ── */
         .timetable {
@@ -668,7 +669,6 @@
 
         /* ── Responsive ── */
         @media (max-width: 960px) {
-            .class-list { grid-template-columns: repeat(2, 1fr); }
             .timetable { grid-template-columns: repeat(3, 1fr); }
             .day:nth-child(4) { border-left: 0; }
             .day:nth-child(n+4) { border-top: 1px solid var(--line); }
@@ -799,22 +799,22 @@
             <p class="intro">Flow Jiu-Jitsu is a Brazilian Jiu-Jitsu and No-Gi grappling academy. Our classes cater to everyone from complete beginners to competitors.</p>
             <div class="class-list">
                 <div class="class-item">
-                    <img src="assets/gallery/team-800.webp" width="800" height="600" loading="lazy" decoding="async" alt="The Flow adult team together on the mats in their gis">
+                    <img src="assets/gallery/team-800.webp" srcset="assets/gallery/team-800.webp 800w, assets/gallery/team-1600.webp 1600w" sizes="(max-width: 600px) 100vw, 450px" width="800" height="600" loading="lazy" decoding="async" alt="The Flow adult team together on the mats in their gis">
                     <h3><i class="dot"></i>Adults</h3>
                     <p>All levels. No-Gi Monday to Thursday, with morning, lunchtime and evening classes. Gi on Thursday evenings.</p>
                 </div>
                 <div class="class-item">
-                    <img src="assets/gallery/class-circle-800.webp" width="800" height="600" loading="lazy" decoding="async" alt="Kids sitting together on the mats during a class at Flow">
+                    <img src="assets/gallery/class-circle-800.webp" srcset="assets/gallery/class-circle-800.webp 800w, assets/gallery/class-circle-1600.webp 1600w" sizes="(max-width: 600px) 100vw, 450px" width="800" height="600" loading="lazy" decoding="async" alt="Kids sitting together on the mats during a class at Flow">
                     <h3><i class="dot kids"></i>Kids</h3>
                     <p>Tuesday and Thursday, 17:00–18:00.</p>
                 </div>
                 <div class="class-item">
-                    <img src="assets/gallery/drilling-800.webp" width="800" height="600" loading="lazy" decoding="async" alt="Flow members drilling techniques in pairs on the mats">
+                    <img src="assets/gallery/drilling-800.webp" srcset="assets/gallery/drilling-800.webp 800w, assets/gallery/drilling-1600.webp 1600w" sizes="(max-width: 600px) 100vw, 450px" width="800" height="600" loading="lazy" decoding="async" alt="Flow members drilling techniques in pairs on the mats">
                     <h3><i class="dot open"></i>Open Mat</h3>
                     <p>Friday, 17:30–18:30. Open training for all levels.</p>
                 </div>
                 <div class="class-item">
-                    <img src="assets/gallery/decision-800.webp" width="800" height="534" loading="lazy" decoding="async" alt="A referee raising a competitor's hand after a match">
+                    <img src="assets/gallery/decision-800.webp" srcset="assets/gallery/decision-800.webp 800w, assets/gallery/decision-1600.webp 1280w" sizes="(max-width: 600px) 100vw, 450px" width="800" height="534" loading="lazy" decoding="async" alt="A referee raising a competitor's hand after a match">
                     <h3><i class="dot comp"></i>Competition</h3>
                     <p>Saturday, 17:30–18:30. For students preparing to compete.</p>
                 </div>
