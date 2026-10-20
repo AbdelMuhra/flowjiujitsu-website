@@ -814,6 +814,10 @@
             .nav-menu a { display: block; padding: 12px 0; font-size: 1rem; }
             .nav-toggle { display: block; }
             .nav-actions .theme-toggle { display: none; }
+            /* Keep the logo, Sign up and menu button inside the scrolled pill on phones */
+            .nav.scrolled .nav-inner { width: calc(100% - 16px); padding: 0 5px 0 14px; gap: 12px; }
+            .brand { min-width: 0; overflow: hidden; }
+            .nav-actions { flex-shrink: 0; }
             .menu-theme { display: block; }
             .two-col { grid-template-columns: 1fr; }
             .founders { grid-template-columns: 1fr; }
@@ -830,6 +834,9 @@
             .day + .day, .day:nth-child(n+4) { border-left: 0; border-top: 1px solid var(--line); }
             .contact-list li { grid-template-columns: 1fr; gap: 2px; }
             .hero .btn, .card .btn { flex: 1; }
+            .brand, .brand span { letter-spacing: 0.14em; }
+            .nav-actions { gap: 6px; }
+            .nav-actions .btn-sm { padding: 0 14px; }
         }
     </style>
 </head>
