@@ -183,7 +183,6 @@
             z-index: 1000;
             height: 68px;
             --nav-ease: cubic-bezier(.2,.8,.2,1);
-            --nav-spring: cubic-bezier(.34,1.32,.64,1);
         }
         .nav-inner {
             position: relative;
@@ -196,50 +195,29 @@
             border: 1px solid transparent;
             border-radius: 0;
             background: rgba(247,245,241,0);
-            color: var(--text);
-            transition: top .6s var(--nav-spring), height .6s var(--nav-spring), max-width .7s var(--nav-spring),
-                        padding .6s var(--nav-spring), border-radius .6s var(--nav-ease),
-                        background-color .45s, border-color .45s, box-shadow .6s, color .45s;
+            transition: top .5s var(--nav-ease), height .5s var(--nav-ease), max-width .5s var(--nav-ease),
+                        padding .5s var(--nav-ease), border-radius .5s var(--nav-ease),
+                        background-color .4s, border-color .4s, box-shadow .5s;
         }
-        /* Scrolled: the bar morphs into a compact capsule floating at the top */
         .nav.scrolled .nav-inner {
-            top: 10px;
-            height: 52px;
-            max-width: 780px;
-            justify-content: center;
-            gap: 28px;
+            top: 8px;
+            height: 54px;
+            max-width: 1000px;
             width: calc(100% - 2 * var(--gutter));
-            padding: 0 6px 0 18px;
+            padding: 0 7px 0 20px;
             border-color: var(--line);
             border-radius: 999px;
-            background: rgba(247,245,241,0.82);
+            background: rgba(247,245,241,0.78);
             backdrop-filter: blur(16px) saturate(1.4);
             -webkit-backdrop-filter: blur(16px) saturate(1.4);
-            box-shadow: 0 18px 40px -18px rgba(22,19,29,0.35);
+            box-shadow: 0 12px 32px -14px rgba(22,19,29,0.28);
         }
-        @media (hover: hover) {
-            .nav.scrolled .nav-inner:hover { max-width: 812px; height: 56px; top: 8px; }
-        }
-        .brand svg { transition: transform .7s var(--nav-spring); }
+        .brand svg { transition: transform .6s var(--nav-ease); }
         .nav.scrolled .brand svg { transform: rotate(72deg) scale(0.9); }
-        /* The wordmark slides away on scroll, leaving just the flower */
-        .brand-text {
-            display: inline-block;
-            max-width: 12em;
-            margin-left: 10px;
-            overflow: hidden;
-            transition: max-width .6s var(--nav-spring), margin-left .6s var(--nav-spring), opacity .35s .1s, transform .6s var(--nav-spring);
-        }
-        .nav.scrolled .brand-text {
-            max-width: 0;
-            margin-left: 0;
-            opacity: 0;
-            transform: translateX(-8px);
-            transition: max-width .5s var(--nav-ease), margin-left .5s var(--nav-ease), opacity .2s, transform .5s var(--nav-ease);
-        }
         .brand {
             display: inline-flex;
             align-items: center;
+            gap: 10px;
             text-decoration: none;
             font-weight: 700;
             letter-spacing: 0.2em;
@@ -247,7 +225,7 @@
             white-space: nowrap;
         }
         .brand svg { width: 28px; height: 28px; flex-shrink: 0; }
-        .brand-text span { font-weight: 500; color: var(--muted); letter-spacing: 0.2em; }
+        .brand span { font-weight: 500; color: var(--muted); letter-spacing: 0.2em; }
 
         .nav-menu { display: flex; gap: 28px; list-style: none; }
         .nav-menu a {
@@ -684,7 +662,7 @@
         @media (prefers-reduced-motion: reduce) {
             html { scroll-behavior: auto; }
             .ambient span { animation: none; }
-            .nav-inner, .brand svg, .brand-text, .nav-menu a::after { transition: none; }
+            .nav-inner, .brand svg, .nav-menu a::after { transition: none; }
             .hero-video { display: none; }
         }
 
@@ -712,7 +690,6 @@
                 display: none;
             }
             .nav-menu a::after { display: none; }
-            .nav.scrolled .nav-inner, .nav.scrolled .nav-inner:hover { max-width: 300px; justify-content: space-between; }
             .nav-menu.open { display: flex; }
             .nav-menu a { display: block; padding: 12px 0; font-size: 1rem; }
             .nav-toggle { display: block; }
@@ -758,7 +735,7 @@
         <div class="wrap nav-inner">
             <a href="#top" class="brand" aria-label="Flow Jiu-Jitsu home">
                 <svg aria-hidden="true"><use href="#flower"/></svg>
-                <span class="brand-text">FLOW <span>JIU-JITSU</span></span>
+                FLOW <span>JIU-JITSU</span>
             </a>
             <nav aria-label="Primary">
                 <ul class="nav-menu" id="nav-menu">
